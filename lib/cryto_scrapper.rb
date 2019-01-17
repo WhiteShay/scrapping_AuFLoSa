@@ -2,5 +2,5 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
    
-page = Nokogiri::HTML(open("http://en.wikipedia.org/"))   
-puts page.class   # => Nokogiri::HTML::Document
+crypto = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/"))   
+print crypto.xpath('//*[@id="currencies-all"]/tbody').text   # => Nokogiri::HTML::Document
