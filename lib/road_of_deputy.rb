@@ -14,7 +14,7 @@ def get_mail
     first_name = deputy_identity[0]
     last_name = deputy_identity[1]
     mail = deputy_page.xpath('//a[contains(@href, "@assemblee-nationale.fr")]').text
-    deputy.push([['first_name', first_name], ['last_name', last_name], ['mail', mail]])
+    deputy.push([{'first_name': first_name, 'last_name': last_name, 'mail': mail}])
   end
   print deputy
 end
